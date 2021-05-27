@@ -5,14 +5,14 @@ import Background from './../components/Products/Background';
 import Templates from './../components/Products/Templates';
 import Estates from './../components/Products/Estates';
 import Footer from './../components/Footer';
-export default function Home() {
+export default function Home(props) {
     return (
         <div>
             <Header />
-            <Main />
-            <Background />
-            <Templates />
-            <Estates />
+            <Main register={props.register} />
+            {/* <Background /> */}
+            {/* <Templates />
+            <Estates /> */}
             <Footer />
         </div>
     )

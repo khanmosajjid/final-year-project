@@ -1,16 +1,23 @@
 import React from 'react'
 
-export default function main() {
+export default function main(props) {
     return (
-        <div className="">
-            <div className="container main">
-                <h2>Decentralised Marketplace</h2>
-                <p className="tag-line">
-                    Welcome to the virtual world’s one-stop-shop for the very best digital assets.
-            </p>
-                <button type="button" className="btn browsing">Start Browsing</button>
-
-            </div>
+      <div className="">
+        <div className="container main">
+          <h2>Decentralised Marketplace</h2>
+          <p className="tag-line">
+            Welcome to the virtual world’s one-stop-shop for the very best
+            digital assets.
+          </p>
+          <button type="button" className="btn browsing" onClick={()=>{
+              props.register()
+          }}>
+            Register As Seller
+          </button>
+          {/* <button type="button" className="btn browsing">
+            Register As Buyer
+          </button> */}
         </div>
-    )
+      </div>
+    );
 }
